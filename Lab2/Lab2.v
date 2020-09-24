@@ -1,42 +1,29 @@
-//module Lab2(bin_data, seg_data);
-//
-//	input[3:0]      bin_data,     // bin data input
-//	output reg[6:0] seg_data      // seven segments LED output
-//
-//endmodule
-
 module Lab2
 (
-	input[3:0]      bin_data,     // bin data input
-	output reg[6:0] seg_data,      // seven segments LED output
-	output reg[5:0] seg_sel			// segment slect
+    input[3:0]      bin_data,     // bin data input
+    output reg[6:0] seg_data,      // seven segments LED output
+    output reg[5:0] seg_sel         // register to select which segment to display digits on
 );
 
-
+wire A,B,C,D;
+assign A = bin_data[3];
+assign B = bin_data[2];
+assign C = bin_data[1];
+assign D = bin_data[0];
 
 always@(*)
 begin
 	seg_sel = 6'b011_111;
-	case(bin_data)
-		4'd0:seg_data <= 7'b100_0000;
-		4'd1:seg_data <= 7'b111_1001;
-		4'd2:seg_data <= 7'b010_0100;
-		4'd3:seg_data <= 7'b011_0000;
-		4'd4:seg_data <= 7'b001_1001;
-		4'd5:seg_data <= 7'b001_0010;
-		4'd6:seg_data <= 7'b000_0010;
-		4'd7:seg_data <= 7'b111_1000;
-		4'd8:seg_data <= 7'b000_0000;
-		4'd9:seg_data <= 7'b001_0000;
-		4'ha:seg_data <= 7'b000_1000;
-		4'hb:seg_data <= 7'b000_0011;
-		4'hc:seg_data <= 7'b100_0110;
-		4'hd:seg_data <= 7'b010_0001;
-		4'he:seg_data <= 7'b000_0110;
-		4'hf:seg_data <= 7'b000_1110;
-		default:seg_data <= 7'b111_1111;
-	endcase
+	
+	seg_data[6] = (~A&~B&~C) | (~A&B&C&D) | (A&B&~C&~D);
+	seg_data[5] = (~A&~B&D) | (~A&~B&C) | (~A&C&D) | (A&B&~C&D);
+	seg_data[4] = (~A&D) | (~A&B&~C) | (~B&~C&D);
+	seg_data[3] = (~A&~B&~C&D) | (~A&B&~C&~D) + (B&C&D) + (A&~B&C&~D);
+	seg_data[2] = (~A&~B&C&~D) | (A&B&~D) | (A&B&C);
+	seg_data[1] = (~A&B&~C&D) | (B&C&~D) | (A&B&~D) | (A&C&D);
+	seg_data[0] = (~A&~B&~C&D) | (~A&B&~C&~D) | (A&B&~C&D) | (A&~B&C&D);
+	
+	
 end
 
 endmodule
-

@@ -1,5 +1,5 @@
 Fitter report for Lab2
-Wed Sep 16 10:10:57 2020
+Thu Sep 24 11:41:07 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Sep 16 10:10:57 2020       ;
+; Fitter Status                      ; Successful - Thu Sep 24 11:41:07 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab2                                        ;
 ; Top-level Entity Name              ; Lab2                                        ;
@@ -327,10 +327,10 @@ The pin-out file can be found in C:/Users/Reuben/Github/EECS3201/Lab2/output_fil
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; bin_data[0] ; N13   ; 5        ; 34           ; 2            ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; bin_data[1] ; M15   ; 5        ; 34           ; 12           ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; bin_data[2] ; M16   ; 5        ; 34           ; 12           ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; bin_data[3] ; E16   ; 6        ; 34           ; 12           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; bin_data[0] ; E16   ; 6        ; 34           ; 12           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; bin_data[1] ; M16   ; 5        ; 34           ; 12           ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; bin_data[2] ; M15   ; 5        ; 34           ; 12           ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; bin_data[3] ; N13   ; 5        ; 34           ; 2            ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -476,7 +476,7 @@ The pin-out file can be found in C:/Users/Reuben/Github/EECS3201/Lab2/output_fil
 ; E13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E15      ; 128        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; E16      ; 127        ; 6        ; bin_data[3]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; E16      ; 127        ; 6        ; bin_data[0]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; F1       ; 12         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F2       ; 11         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F3       ; 6          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -588,8 +588,8 @@ The pin-out file can be found in C:/Users/Reuben/Github/EECS3201/Lab2/output_fil
 ; M12      ; 103        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M14      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; M15      ; 126        ; 5        ; bin_data[1]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; M16      ; 125        ; 5        ; bin_data[2]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M15      ; 126        ; 5        ; bin_data[2]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M16      ; 125        ; 5        ; bin_data[1]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N1       ; 38         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N2       ; 37         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N3       ; 45         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -602,7 +602,7 @@ The pin-out file can be found in C:/Users/Reuben/Github/EECS3201/Lab2/output_fil
 ; N10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N11      ; 94         ; 4        ; seg_sel[3]                                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; N12      ; 101        ; 4        ; seg_data[5]                                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; N13      ; 102        ; 5        ; bin_data[0]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; N13      ; 102        ; 5        ; bin_data[3]                                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N14      ; 106        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N15      ; 112        ; 5        ; seg_data[6]                                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N16      ; 111        ; 5        ; seg_data[1]                                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -707,10 +707,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seg_sel[3]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; seg_sel[4]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; seg_sel[5]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; bin_data[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; bin_data[1] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; bin_data[0] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; bin_data[3] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; bin_data[2] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; bin_data[3] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; bin_data[1] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +-------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -720,16 +720,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; bin_data[0]         ;                   ;         ;
-;      - WideOr6~0    ; 0                 ; 6       ;
-;      - WideOr5~0    ; 0                 ; 6       ;
-;      - WideOr4~0    ; 0                 ; 6       ;
-;      - WideOr3~0    ; 0                 ; 6       ;
-;      - WideOr2~0    ; 0                 ; 6       ;
-;      - WideOr1~0    ; 0                 ; 6       ;
-;      - WideOr0~0    ; 0                 ; 6       ;
-; bin_data[1]         ;                   ;         ;
-; bin_data[2]         ;                   ;         ;
 ; bin_data[3]         ;                   ;         ;
+;      - seg_data~0   ; 1                 ; 6       ;
+;      - seg_data~1   ; 1                 ; 6       ;
+;      - seg_data~2   ; 1                 ; 6       ;
+;      - seg_data~3   ; 1                 ; 6       ;
+;      - seg_data~4   ; 1                 ; 6       ;
+;      - seg_data~5   ; 1                 ; 6       ;
+;      - seg_data~6   ; 1                 ; 6       ;
+; bin_data[2]         ;                   ;         ;
+; bin_data[1]         ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -740,8 +740,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Block interconnects   ; 11 / 32,401 ( < 1 % ) ;
 ; C16 interconnects     ; 0 / 1,326 ( 0 % )     ;
-; C4 interconnects      ; 16 / 21,816 ( < 1 % ) ;
-; Direct links          ; 2 / 32,401 ( < 1 % )  ;
+; C4 interconnects      ; 13 / 21,816 ( < 1 % ) ;
+; Direct links          ; 1 / 32,401 ( < 1 % )  ;
 ; Global clocks         ; 0 / 10 ( 0 % )        ;
 ; Local interconnects   ; 0 / 10,320 ( 0 % )    ;
 ; R24 interconnects     ; 0 / 1,289 ( 0 % )     ;
@@ -892,9 +892,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seg_sel[4]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; seg_sel[5]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; bin_data[0]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; bin_data[1]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; bin_data[2]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; bin_data[3]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; bin_data[2]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; bin_data[1]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -986,14 +986,14 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin bin_data[0] uses I/O standard 3.3-V LVTTL at N13 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 10
-    Info (169178): Pin bin_data[1] uses I/O standard 3.3-V LVTTL at M15 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 10
-    Info (169178): Pin bin_data[2] uses I/O standard 3.3-V LVTTL at M16 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 10
-    Info (169178): Pin bin_data[3] uses I/O standard 3.3-V LVTTL at E16 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 10
+    Info (169178): Pin bin_data[0] uses I/O standard 3.3-V LVTTL at E16 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 3
+    Info (169178): Pin bin_data[3] uses I/O standard 3.3-V LVTTL at N13 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 3
+    Info (169178): Pin bin_data[2] uses I/O standard 3.3-V LVTTL at M15 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 3
+    Info (169178): Pin bin_data[1] uses I/O standard 3.3-V LVTTL at M16 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 3
 Info (144001): Generated suppressed messages file C:/Users/Reuben/Github/EECS3201/Lab2/output_files/Lab2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6083 megabytes
-    Info: Processing ended: Wed Sep 16 10:10:58 2020
+    Info: Peak virtual memory: 6079 megabytes
+    Info: Processing ended: Thu Sep 24 11:41:08 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 

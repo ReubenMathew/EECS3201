@@ -36,7 +36,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "bin_data[1]",
+					"name" : "bin_data[3]",
 					"strict" : false
 				},
 				{
@@ -44,7 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "bin_data[3]",
+					"name" : "bin_data[1]",
 					"strict" : false
 				}
 			]

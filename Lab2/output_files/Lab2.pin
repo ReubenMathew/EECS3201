@@ -148,7 +148,7 @@ GNDA2                        : E12       : gnd    :                   :         
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 3.3V    : 6         :                
 GND+                         : E15       :        :                   :         : 6         :                
-bin_data[3]                  : E16       : input  : 3.3-V LVTTL       :         : 6         : Y              
+bin_data[0]                  : E16       : input  : 3.3-V LVTTL       :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
@@ -259,8 +259,8 @@ seg_sel[5]                   : M11       : output : 3.3-V LVTTL       :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : M12       :        :                   :         : 5         :                
 GND                          : M13       : gnd    :                   :         :           :                
 VCCIO5                       : M14       : power  :                   : 3.3V    : 5         :                
-bin_data[1]                  : M15       : input  : 3.3-V LVTTL       :         : 5         : Y              
-bin_data[2]                  : M16       : input  : 3.3-V LVTTL       :         : 5         : Y              
+bin_data[2]                  : M15       : input  : 3.3-V LVTTL       :         : 5         : Y              
+bin_data[1]                  : M16       : input  : 3.3-V LVTTL       :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 3         :                
@@ -273,7 +273,7 @@ seg_sel[0]                   : N9        : output : 3.3-V LVTTL       :         
 GND                          : N10       : gnd    :                   :         :           :                
 seg_sel[3]                   : N11       : output : 3.3-V LVTTL       :         : 4         : Y              
 seg_data[5]                  : N12       : output : 3.3-V LVTTL       :         : 4         : Y              
-bin_data[0]                  : N13       : input  : 3.3-V LVTTL       :         : 5         : Y              
+bin_data[3]                  : N13       : input  : 3.3-V LVTTL       :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 5         :                
 seg_data[6]                  : N15       : output : 3.3-V LVTTL       :         : 5         : Y              
 seg_data[1]                  : N16       : output : 3.3-V LVTTL       :         : 5         : Y              
