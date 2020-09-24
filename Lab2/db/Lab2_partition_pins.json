@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seg_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bin_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bin_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bin_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bin_data[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

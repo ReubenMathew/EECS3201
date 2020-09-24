@@ -1,0 +1,20 @@
+|Lab2
+bin_data[0] => Decoder0.IN3
+bin_data[1] => Decoder0.IN2
+bin_data[2] => Decoder0.IN1
+bin_data[3] => Decoder0.IN0
+seg_data[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_data[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_data[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_data[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_data[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_data[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_data[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_sel[0] <= <VCC>
+seg_sel[1] <= <VCC>
+seg_sel[2] <= <VCC>
+seg_sel[3] <= <VCC>
+seg_sel[4] <= <VCC>
+seg_sel[5] <= <GND>
+
+
