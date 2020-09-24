@@ -2,6 +2,7 @@ module Lab2
 (
     input[3:0]      bin_data,     // bin data input
     output reg[6:0] seg_data,      // seven segments LED output
+	 
     output reg[5:0] seg_sel         // register to select which segment to display digits on
 );
 
@@ -15,7 +16,12 @@ always@(*)
 begin
 	seg_sel = 6'b011_111;
 	
-	seg_data[6] = (~A&~B&~C) | (~A&B&C&D) | (A&B&~C&~D);
+// In minterm form the function was originally f = ~(ABCD) + ~A~B~CD + ~ABCD + AB~C~D
+// Reduction:
+// f = ~(ABCD) + ~A~B~CD + ~ABCD + AB~C~D
+//   = ~(ABC)(~D + D) + ~ABCD + AB~C~D
+//   = (~A~B~C) + ~ABCD + AB~C~D
+	seg_data[6] = (~A&~B&~C) | ~A&B&C&D | A&B&~C&~D;
 	seg_data[5] = (~A&~B&D) | (~A&~B&C) | (~A&C&D) | (A&B&~C&D);
 	seg_data[4] = (~A&D) | (~A&B&~C) | (~B&~C&D);
 	seg_data[3] = (~A&~B&~C&D) | (~A&B&~C&~D) + (B&C&D) + (A&~B&C&~D);

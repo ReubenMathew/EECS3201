@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Thu Sep 24 11:41:04 2020
+Thu Sep 24 16:52:12 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 24 11:41:04 2020       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 24 16:52:12 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab2                                        ;
 ; Top-level Entity Name              ; Lab2                                        ;
@@ -259,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 24 11:40:57 2020
+    Info: Processing started: Thu Sep 24 16:52:06 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -267,12 +267,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file lab2.v
     Info (12023): Found entity 1: Lab2 File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 1
 Info (12127): Elaborating entity "Lab2" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_sel[0]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 6
-    Warning (13410): Pin "seg_sel[1]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 6
-    Warning (13410): Pin "seg_sel[2]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 6
-    Warning (13410): Pin "seg_sel[3]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 6
-    Warning (13410): Pin "seg_sel[4]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 6
-    Warning (13410): Pin "seg_sel[5]" is stuck at GND File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 6
+    Warning (13410): Pin "seg_sel[0]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 7
+    Warning (13410): Pin "seg_sel[1]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 7
+    Warning (13410): Pin "seg_sel[2]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 7
+    Warning (13410): Pin "seg_sel[3]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 7
+    Warning (13410): Pin "seg_sel[4]" is stuck at VCC File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 7
+    Warning (13410): Pin "seg_sel[5]" is stuck at GND File: C:/Users/Reuben/Github/EECS3201/Lab2/Lab2.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -282,8 +282,8 @@ Info (21057): Implemented 24 device resources after synthesis - the final resour
     Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Thu Sep 24 11:41:04 2020
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Thu Sep 24 16:52:12 2020
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 
 
