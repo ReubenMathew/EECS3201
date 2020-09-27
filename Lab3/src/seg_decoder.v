@@ -12,7 +12,16 @@ assign D = bin_data[0];
 always@(*)
 begin
 
-	if(bin_data != 5'd10000)
+	if(bin_data == 5'b10000)
+	begin
+		seg_data = 7'hff;
+
+	end
+	else if(bin_data == 5'b10001)
+	begin
+		seg_data = 7'b0111111;
+	end
+	else
 	begin
 		seg_data[6] = (~A&~B&~C) | ~A&B&C&D | A&B&~C&~D;
 		seg_data[5] = (~A&~B&D) | (~A&~B&C) | (~A&C&D) | (A&B&~C&D);
@@ -21,10 +30,6 @@ begin
 		seg_data[2] = (~A&~B&C&~D) | (A&B&~D) | (A&B&C);
 		seg_data[1] = (~A&B&~C&D) | (B&C&~D) | (A&B&~D) | (A&C&D);
 		seg_data[0] = (~A&~B&~C&D) | (~A&B&~C&~D) | (A&B&~C&D) | (A&~B&C&D);
-	end
-	else
-	begin
-		seg_data = 7'hff;
 	end
 end
 

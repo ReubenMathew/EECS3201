@@ -1,19 +1,101 @@
 |Lab3
-seg_sel[0] << display:display_1.seg_sel
-seg_sel[1] << display:display_1.seg_sel
-seg_sel[2] << display:display_1.seg_sel
-seg_sel[3] << display:display_1.seg_sel
-seg_sel[4] << display:display_1.seg_sel
-seg_sel[5] << display:display_1.seg_sel
-seg_data[0] << display:display_1.seg_data
-seg_data[1] << display:display_1.seg_data
-seg_data[2] << display:display_1.seg_data
-seg_data[3] << display:display_1.seg_data
-seg_data[4] << display:display_1.seg_data
-seg_data[5] << display:display_1.seg_data
-seg_data[6] << display:display_1.seg_data
-seg_data[7] << display:display_1.seg_data
+seg_sel[0] <= display:display_1.seg_sel
+seg_sel[1] <= display:display_1.seg_sel
+seg_sel[2] <= display:display_1.seg_sel
+seg_sel[3] <= display:display_1.seg_sel
+seg_sel[4] <= display:display_1.seg_sel
+seg_sel[5] <= display:display_1.seg_sel
+seg_data[0] <= display:display_1.seg_data
+seg_data[1] <= display:display_1.seg_data
+seg_data[2] <= display:display_1.seg_data
+seg_data[3] <= display:display_1.seg_data
+seg_data[4] <= display:display_1.seg_data
+seg_data[5] <= display:display_1.seg_data
+seg_data[6] <= display:display_1.seg_data
+seg_data[7] <= display:display_1.seg_data
 clk => clk.IN1
+
+
+|Lab3|arith:arith_1
+z[0] <= rippleAdder:rippleAdder_a.port0
+z[1] <= rippleAdder:rippleAdder_a.port0
+z[2] <= rippleAdder:rippleAdder_a.port0
+z[3] <= rippleAdder:rippleAdder_a.port0
+cout <= rippleAdder:rippleAdder_a.port1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => tmp.DATAA
+b[0] => tmp.DATAB
+b[1] => tmp.DATAA
+b[1] => tmp.DATAB
+b[2] => tmp.DATAA
+b[2] => tmp.DATAB
+b[3] => tmp.DATAA
+b[3] => tmp.DATAB
+s => cin.IN1
+
+
+|Lab3|arith:arith_1|rippleAdder:rippleAdder_a
+z[0] <= fullAdder:fullAdder_0.port0
+z[1] <= fullAdder:fullAdder_1.port0
+z[2] <= fullAdder:fullAdder_2.port0
+z[3] <= fullAdder:fullAdder_3.port0
+cout <= fullAdder:fullAdder_3.port1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+
+
+|Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_0
+z <= right_xor.DB_MAX_OUTPUT_PORT_TYPE
+cout <= my_or.DB_MAX_OUTPUT_PORT_TYPE
+a => left_xor.IN0
+a => left_and.IN0
+b => left_xor.IN1
+b => left_and.IN1
+cin => right_xor.IN1
+cin => right_and.IN1
+
+
+|Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_1
+z <= right_xor.DB_MAX_OUTPUT_PORT_TYPE
+cout <= my_or.DB_MAX_OUTPUT_PORT_TYPE
+a => left_xor.IN0
+a => left_and.IN0
+b => left_xor.IN1
+b => left_and.IN1
+cin => right_xor.IN1
+cin => right_and.IN1
+
+
+|Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_2
+z <= right_xor.DB_MAX_OUTPUT_PORT_TYPE
+cout <= my_or.DB_MAX_OUTPUT_PORT_TYPE
+a => left_xor.IN0
+a => left_and.IN0
+b => left_xor.IN1
+b => left_and.IN1
+cin => right_xor.IN1
+cin => right_and.IN1
+
+
+|Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_3
+z <= right_xor.DB_MAX_OUTPUT_PORT_TYPE
+cout <= my_or.DB_MAX_OUTPUT_PORT_TYPE
+a => left_xor.IN0
+a => left_and.IN0
+b => left_xor.IN1
+b => left_and.IN1
+cin => right_xor.IN1
+cin => right_and.IN1
 
 
 |Lab3|seg_decoder:seg_decoder_m0
@@ -29,6 +111,7 @@ bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => Equal0.IN5
+bin_data[0] => Equal1.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
@@ -43,6 +126,7 @@ bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
 bin_data[1] => Equal0.IN4
+bin_data[1] => Equal1.IN5
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
@@ -51,6 +135,7 @@ bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => Equal0.IN3
+bin_data[2] => Equal1.IN4
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => seg_data.IN0
@@ -58,12 +143,15 @@ bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => Equal0.IN2
+bin_data[3] => Equal1.IN3
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[4] => Equal0.IN0
+bin_data[4] => Equal1.IN0
 bin_data[5] => Equal0.IN1
+bin_data[5] => Equal1.IN2
 seg_data[0] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[1] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[2] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
@@ -86,6 +174,7 @@ bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => Equal0.IN5
+bin_data[0] => Equal1.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
@@ -100,6 +189,7 @@ bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
 bin_data[1] => Equal0.IN4
+bin_data[1] => Equal1.IN5
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
@@ -108,6 +198,7 @@ bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => Equal0.IN3
+bin_data[2] => Equal1.IN4
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => seg_data.IN0
@@ -115,12 +206,15 @@ bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => Equal0.IN2
+bin_data[3] => Equal1.IN3
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[4] => Equal0.IN0
+bin_data[4] => Equal1.IN0
 bin_data[5] => Equal0.IN1
+bin_data[5] => Equal1.IN2
 seg_data[0] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[1] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[2] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
@@ -143,6 +237,7 @@ bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => Equal0.IN5
+bin_data[0] => Equal1.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
@@ -157,6 +252,7 @@ bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
 bin_data[1] => Equal0.IN4
+bin_data[1] => Equal1.IN5
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
@@ -165,6 +261,7 @@ bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => Equal0.IN3
+bin_data[2] => Equal1.IN4
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => seg_data.IN0
@@ -172,12 +269,15 @@ bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => Equal0.IN2
+bin_data[3] => Equal1.IN3
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[4] => Equal0.IN0
+bin_data[4] => Equal1.IN0
 bin_data[5] => Equal0.IN1
+bin_data[5] => Equal1.IN2
 seg_data[0] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[1] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[2] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
@@ -200,6 +300,7 @@ bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => Equal0.IN5
+bin_data[0] => Equal1.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
@@ -214,6 +315,7 @@ bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
 bin_data[1] => Equal0.IN4
+bin_data[1] => Equal1.IN5
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
@@ -222,6 +324,7 @@ bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => Equal0.IN3
+bin_data[2] => Equal1.IN4
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => seg_data.IN0
@@ -229,12 +332,15 @@ bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => Equal0.IN2
+bin_data[3] => Equal1.IN3
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[4] => Equal0.IN0
+bin_data[4] => Equal1.IN0
 bin_data[5] => Equal0.IN1
+bin_data[5] => Equal1.IN2
 seg_data[0] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[1] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[2] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
@@ -257,6 +363,7 @@ bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => Equal0.IN5
+bin_data[0] => Equal1.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
@@ -271,6 +378,7 @@ bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
 bin_data[1] => Equal0.IN4
+bin_data[1] => Equal1.IN5
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
@@ -279,6 +387,7 @@ bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => Equal0.IN3
+bin_data[2] => Equal1.IN4
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => seg_data.IN0
@@ -286,12 +395,15 @@ bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => Equal0.IN2
+bin_data[3] => Equal1.IN3
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[4] => Equal0.IN0
+bin_data[4] => Equal1.IN0
 bin_data[5] => Equal0.IN1
+bin_data[5] => Equal1.IN2
 seg_data[0] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[1] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[2] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
@@ -314,6 +426,7 @@ bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => Equal0.IN5
+bin_data[0] => Equal1.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
 bin_data[0] => seg_data.IN1
@@ -328,6 +441,7 @@ bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
 bin_data[1] => Equal0.IN4
+bin_data[1] => Equal1.IN5
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN1
 bin_data[1] => seg_data.IN0
@@ -336,6 +450,7 @@ bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => Equal0.IN3
+bin_data[2] => Equal1.IN4
 bin_data[2] => seg_data.IN0
 bin_data[2] => seg_data.IN1
 bin_data[2] => seg_data.IN0
@@ -343,12 +458,15 @@ bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => Equal0.IN2
+bin_data[3] => Equal1.IN3
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[3] => seg_data.IN1
 bin_data[4] => Equal0.IN0
+bin_data[4] => Equal1.IN0
 bin_data[5] => Equal0.IN1
+bin_data[5] => Equal1.IN2
 seg_data[0] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[1] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE
 seg_data[2] <= seg_data.DB_MAX_OUTPUT_PORT_TYPE

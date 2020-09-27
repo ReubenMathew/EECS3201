@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Sat Sep 26 22:24:21 2020
+Sun Sep 27 01:10:35 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -22,9 +22,10 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  14. Port Connectivity Checks: "seg_decoder:seg_decoder_m2"
  15. Port Connectivity Checks: "seg_decoder:seg_decoder_m1"
  16. Port Connectivity Checks: "seg_decoder:seg_decoder_m0"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 17. Port Connectivity Checks: "arith:arith_1"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -51,13 +52,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 26 22:24:21 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Sep 27 01:10:35 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 60                                          ;
-;     Total combinational functions  ; 58                                          ;
+;     Total combinational functions  ; 57                                          ;
 ;     Dedicated logic registers      ; 49                                          ;
 ; Total registers                    ; 49                                          ;
 ; Total pins                         ; 15                                          ;
@@ -179,6 +180,9 @@ https://fpgasoftware.intel.com/eula.
 ; Lab3.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v            ;         ;
 ; src/seg_decoder.v                ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/EECS3201/Lab3/src/seg_decoder.v ;         ;
 ; src/display.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v     ;         ;
+; src/fullAdder.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v   ;         ;
+; src/rippleAdder.v                ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/EECS3201/Lab3/src/rippleAdder.v ;         ;
+; src/arith.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/EECS3201/Lab3/src/arith.v       ;         ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
 
 
@@ -189,14 +193,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Estimated Total logic elements              ; 60        ;
 ;                                             ;           ;
-; Total combinational functions               ; 58        ;
+; Total combinational functions               ; 57        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 22        ;
+;     -- 4 input functions                    ; 21        ;
 ;     -- 3 input functions                    ; 1         ;
 ;     -- <=2 input functions                  ; 35        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 27        ;
+;     -- normal mode                          ; 26        ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
 ; Total registers                             ; 49        ;
@@ -209,8 +213,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 49        ;
-; Total fan-out                               ; 320       ;
-; Average fan-out                             ; 2.34      ;
+; Total fan-out                               ; 316       ;
+; Average fan-out                             ; 2.32      ;
 +---------------------------------------------+-----------+
 
 
@@ -219,8 +223,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
-; |Lab3                      ; 58 (0)              ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |Lab3                   ; Lab3        ; work         ;
-;    |display:display_1|     ; 58 (58)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|display:display_1 ; display     ; work         ;
+; |Lab3                      ; 57 (0)              ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |Lab3                   ; Lab3        ; work         ;
+;    |display:display_1|     ; 57 (57)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|display:display_1 ; display     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -265,29 +269,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_decoder:seg_decoder_m5"                                                                                                                            ;
-+-------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                                                                                                                          ;
-+-------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin_data    ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
-; bin_data[5] ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-; bin_data[4] ; Input ; Info     ; Stuck at VCC                                                                                                                                     ;
-; bin_data[3] ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-; bin_data[2] ; Input ; Info     ; Stuck at VCC                                                                                                                                     ;
-+-------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seg_decoder:seg_decoder_m5"                                                                                                                         ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; bin_data ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_decoder:seg_decoder_m4"                                                                                                                               ;
-+----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type  ; Severity ; Details                                                                                                                                          ;
-+----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin_data       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
-; bin_data[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-; bin_data[5]    ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-; bin_data[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                     ;
-+----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "seg_decoder:seg_decoder_m4" ;
++----------------+-------+----------+--------------------+
+; Port           ; Type  ; Severity ; Details            ;
++----------------+-------+----------+--------------------+
+; bin_data[3..1] ; Input ; Info     ; Stuck at GND       ;
+; bin_data[5]    ; Input ; Info     ; Stuck at GND       ;
+; bin_data[4]    ; Input ; Info     ; Stuck at VCC       ;
++----------------+-------+----------+--------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -301,16 +300,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_decoder:seg_decoder_m2"                                                                                                                               ;
-+----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type  ; Severity ; Details                                                                                                                                          ;
-+----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin_data       ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
-; bin_data[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-; bin_data[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                                     ;
-; bin_data[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-+----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "seg_decoder:seg_decoder_m2" ;
++----------------+-------+----------+--------------------+
+; Port           ; Type  ; Severity ; Details            ;
++----------------+-------+----------+--------------------+
+; bin_data[5..4] ; Input ; Info     ; Stuck at GND       ;
+; bin_data[2..0] ; Input ; Info     ; Stuck at GND       ;
+; bin_data[3]    ; Input ; Info     ; Stuck at VCC       ;
++----------------+-------+----------+--------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -324,14 +322,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seg_decoder:seg_decoder_m0"                                                                                                                         ;
-+----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
-+----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin_data ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
-; bin_data ; Input ; Info     ; Stuck at GND                                                                                                                                     ;
-+----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "seg_decoder:seg_decoder_m0" ;
++----------------+-------+----------+--------------------+
+; Port           ; Type  ; Severity ; Details            ;
++----------------+-------+----------+--------------------+
+; bin_data[1..0] ; Input ; Info     ; Stuck at VCC       ;
+; bin_data[5..2] ; Input ; Info     ; Stuck at GND       ;
++----------------+-------+----------+--------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "arith:arith_1" ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; a[1..0] ; Input ; Info     ; Stuck at VCC ;
+; a[3..2] ; Input ; Info     ; Stuck at GND ;
+; b[2..0] ; Input ; Info     ; Stuck at GND ;
+; b[3]    ; Input ; Info     ; Stuck at VCC ;
+; s       ; Input ; Info     ; Stuck at VCC ;
++---------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -344,18 +355,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 3                           ;
 ;     SCLR              ; 32                          ;
 ;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 59                          ;
+; cycloneiii_lcell_comb ; 58                          ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 28                          ;
+;     normal            ; 27                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 22                          ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.79                        ;
+; Average LUT depth     ; 2.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -374,23 +385,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 26 22:24:14 2020
+    Info: Processing started: Sun Sep 27 01:10:28 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Warning (10229): Verilog HDL Expression warning at Lab3.v(14): truncated literal to match 5 bits File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 14
-Warning (10229): Verilog HDL Expression warning at Lab3.v(24): truncated literal to match 5 bits File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file lab3.v
     Info (12023): Found entity 1: Lab3 File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 1
-Warning (10229): Verilog HDL Expression warning at seg_decoder.v(15): truncated literal to match 5 bits File: C:/Users/Reuben/Github/EECS3201/Lab3/src/seg_decoder.v Line: 15
-Warning (10229): Verilog HDL Expression warning at seg_decoder.v(27): truncated literal to match 7 bits File: C:/Users/Reuben/Github/EECS3201/Lab3/src/seg_decoder.v Line: 27
+Warning (10229): Verilog HDL Expression warning at seg_decoder.v(17): truncated literal to match 7 bits File: C:/Users/Reuben/Github/EECS3201/Lab3/src/seg_decoder.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file src/seg_decoder.v
     Info (12023): Found entity 1: seg_decoder File: C:/Users/Reuben/Github/EECS3201/Lab3/src/seg_decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/display.v
     Info (12023): Found entity 1: display File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/fulladder.v
+    Info (12023): Found entity 1: fullAdder File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/rippleadder.v
+    Info (12023): Found entity 1: rippleAdder File: C:/Users/Reuben/Github/EECS3201/Lab3/src/rippleAdder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/arith.v
+    Info (12023): Found entity 1: arith File: C:/Users/Reuben/Github/EECS3201/Lab3/src/arith.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(4): created implicit net for "tmp" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(6): created implicit net for "outL" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(7): created implicit net for "outR" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 7
 Info (12127): Elaborating entity "Lab3" for the top level hierarchy
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 11
-Info (12128): Elaborating entity "display" for hierarchy "display:display_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 52
+Info (12128): Elaborating entity "arith" for hierarchy "arith:arith_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 37
+Info (12128): Elaborating entity "rippleAdder" for hierarchy "arith:arith_1|rippleAdder:rippleAdder_a" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/arith.v Line: 23
+Info (12128): Elaborating entity "fullAdder" for hierarchy "arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_0" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/rippleAdder.v Line: 10
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 43
+Info (12128): Elaborating entity "display" for hierarchy "display:display_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 85
 Warning (10230): Verilog HDL assignment warning at display.v(42): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 42
 Warning (10230): Verilog HDL assignment warning at display.v(47): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 47
 Warning (10230): Verilog HDL assignment warning at display.v(52): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 52
@@ -398,19 +418,19 @@ Warning (10230): Verilog HDL assignment warning at display.v(57): truncated valu
 Warning (10230): Verilog HDL assignment warning at display.v(62): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 62
 Warning (10230): Verilog HDL assignment warning at display.v(67): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 67
 Warning (10230): Verilog HDL assignment warning at display.v(72): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 72
-Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_data[7]" is stuck at GND File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 3
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 62 logic cells
+    Info (21061): Implemented 63 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Sat Sep 26 22:24:21 2020
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Sun Sep 27 01:10:35 2020
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:14
 
