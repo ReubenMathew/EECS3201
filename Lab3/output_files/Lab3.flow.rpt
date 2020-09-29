@@ -1,5 +1,5 @@
 Flow report for Lab3
-Sun Sep 27 01:10:44 2020
+Mon Sep 28 21:59:06 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Sep 27 01:10:41 2020       ;
+; Flow Status                        ; Successful - Mon Sep 28 21:59:03 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6F17C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 59 / 6,272 ( < 1 % )                        ;
+; Total logic elements               ; 60 / 6,272 ( < 1 % )                        ;
 ;     Total combinational functions  ; 57 / 6,272 ( < 1 % )                        ;
 ;     Dedicated logic registers      ; 49 / 6,272 ( < 1 % )                        ;
 ; Total registers                    ; 49                                          ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/27/2020 01:10:28 ;
+; Start date & time ; 09/28/2020 21:58:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 39908807422044.160118702816700         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 39908807422044.160134833102804         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -92,11 +92,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4815 MB             ; 00:00:14                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4815 MB             ; 00:00:15                           ;
 ; Fitter               ; 00:00:03     ; 1.1                     ; 6101 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4678 MB             ; 00:00:01                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4677 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4848 MB             ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:21                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

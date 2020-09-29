@@ -5,24 +5,35 @@ module Lab3(
 );
 
 
-reg[3:0] a = 4'd3;
-reg[3:0] b = 4'd8;
+reg[3:0] a = 4'd4;
+reg[3:0] b = 4'd10;
 reg s = 1'b1; // subtraction control
 
 wire[3:0] z;
 wire cout;
 
-
 reg [5:0] cout_op;
+reg [3:0] result;
 
+
+// If there is a carry out during subtraction, it means the resultant subtraction must undo the twos complement and display a "-" sign
+// If not then it either is regular subtraction with a positive difference and no "-" sign, or addition where there may be a carry out
+// Using nested if statements I can create the required output for the 4 possible cases
 always@(*)
 begin
 	if (s == 1'b1)
 	begin
 		if (cout == 1'b0)
+		begin
 			cout_op = 5'b10001;
+			result = (~z)+1'b1;
+		end
 		else
+		begin
 			cout_op = 5'b10000;
+			result = z;
+		end
+				
 	end
 	else
 	begin
@@ -30,6 +41,8 @@ begin
 			cout_op = 5'b10000;
 		else
 			cout_op = cout;
+
+		result = z;
 	end
 end
 
@@ -65,7 +78,7 @@ seg_decoder seg_decoder_m4(
 
 wire[6:0] seg_data_5;
 seg_decoder seg_decoder_m5(
-    .bin_data  (z),
+    .bin_data  (result),
     .seg_data  (seg_data_5)
 );
 

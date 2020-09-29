@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Sun Sep 27 01:10:35 2020
+Mon Sep 28 21:58:57 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Sep 27 01:10:35 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 28 21:58:57 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
@@ -306,8 +306,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port           ; Type  ; Severity ; Details            ;
 +----------------+-------+----------+--------------------+
 ; bin_data[5..4] ; Input ; Info     ; Stuck at GND       ;
-; bin_data[2..0] ; Input ; Info     ; Stuck at GND       ;
 ; bin_data[3]    ; Input ; Info     ; Stuck at VCC       ;
+; bin_data[2]    ; Input ; Info     ; Stuck at GND       ;
+; bin_data[1]    ; Input ; Info     ; Stuck at VCC       ;
+; bin_data[0]    ; Input ; Info     ; Stuck at GND       ;
 +----------------+-------+----------+--------------------+
 
 
@@ -327,8 +329,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------------+
 ; Port           ; Type  ; Severity ; Details            ;
 +----------------+-------+----------+--------------------+
-; bin_data[1..0] ; Input ; Info     ; Stuck at VCC       ;
-; bin_data[5..2] ; Input ; Info     ; Stuck at GND       ;
+; bin_data[5..3] ; Input ; Info     ; Stuck at GND       ;
+; bin_data[1..0] ; Input ; Info     ; Stuck at GND       ;
+; bin_data[2]    ; Input ; Info     ; Stuck at VCC       ;
 +----------------+-------+----------+--------------------+
 
 
@@ -337,10 +340,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+--------------+
 ; Port    ; Type  ; Severity ; Details      ;
 +---------+-------+----------+--------------+
-; a[1..0] ; Input ; Info     ; Stuck at VCC ;
-; a[3..2] ; Input ; Info     ; Stuck at GND ;
-; b[2..0] ; Input ; Info     ; Stuck at GND ;
+; a[1..0] ; Input ; Info     ; Stuck at GND ;
+; a[3]    ; Input ; Info     ; Stuck at GND ;
+; a[2]    ; Input ; Info     ; Stuck at VCC ;
 ; b[3]    ; Input ; Info     ; Stuck at VCC ;
+; b[2]    ; Input ; Info     ; Stuck at GND ;
+; b[1]    ; Input ; Info     ; Stuck at VCC ;
+; b[0]    ; Input ; Info     ; Stuck at GND ;
 ; s       ; Input ; Info     ; Stuck at VCC ;
 +---------+-------+----------+--------------+
 
@@ -385,7 +391,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 27 01:10:28 2020
+    Info: Processing started: Mon Sep 28 21:58:51 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -406,11 +412,11 @@ Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(4): created imp
 Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(6): created implicit net for "outL" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 6
 Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(7): created implicit net for "outR" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 7
 Info (12127): Elaborating entity "Lab3" for the top level hierarchy
-Info (12128): Elaborating entity "arith" for hierarchy "arith:arith_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 37
+Info (12128): Elaborating entity "arith" for hierarchy "arith:arith_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 47
 Info (12128): Elaborating entity "rippleAdder" for hierarchy "arith:arith_1|rippleAdder:rippleAdder_a" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/arith.v Line: 23
 Info (12128): Elaborating entity "fullAdder" for hierarchy "arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_0" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/rippleAdder.v Line: 10
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 43
-Info (12128): Elaborating entity "display" for hierarchy "display:display_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 85
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 53
+Info (12128): Elaborating entity "display" for hierarchy "display:display_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 95
 Warning (10230): Verilog HDL assignment warning at display.v(42): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 42
 Warning (10230): Verilog HDL assignment warning at display.v(47): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 47
 Warning (10230): Verilog HDL assignment warning at display.v(52): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 52
@@ -430,8 +436,8 @@ Info (21057): Implemented 78 device resources after synthesis - the final resour
     Info (21061): Implemented 63 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Sun Sep 27 01:10:35 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Processing ended: Mon Sep 28 21:58:57 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
 
 
