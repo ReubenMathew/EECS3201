@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Mon Sep 28 21:58:57 2020
+Wed Sep 30 10:15:03 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,15 +14,15 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: display:display_1
- 10. Port Connectivity Checks: "display:display_1"
- 11. Port Connectivity Checks: "seg_decoder:seg_decoder_m5"
- 12. Port Connectivity Checks: "seg_decoder:seg_decoder_m4"
- 13. Port Connectivity Checks: "seg_decoder:seg_decoder_m3"
- 14. Port Connectivity Checks: "seg_decoder:seg_decoder_m2"
- 15. Port Connectivity Checks: "seg_decoder:seg_decoder_m1"
- 16. Port Connectivity Checks: "seg_decoder:seg_decoder_m0"
- 17. Port Connectivity Checks: "arith:arith_1"
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: display:display_1
+ 11. Port Connectivity Checks: "display:display_1"
+ 12. Port Connectivity Checks: "seg_decoder:seg_decoder_m5"
+ 13. Port Connectivity Checks: "seg_decoder:seg_decoder_m4"
+ 14. Port Connectivity Checks: "seg_decoder:seg_decoder_m3"
+ 15. Port Connectivity Checks: "seg_decoder:seg_decoder_m2"
+ 16. Port Connectivity Checks: "seg_decoder:seg_decoder_m1"
+ 17. Port Connectivity Checks: "seg_decoder:seg_decoder_m0"
  18. Post-Synthesis Netlist Statistics for Top Partition
  19. Elapsed Time Per Partition
  20. Analysis & Synthesis Messages
@@ -52,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 28 21:58:57 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 30 10:15:03 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 60                                          ;
-;     Total combinational functions  ; 57                                          ;
+; Total logic elements               ; 114                                         ;
+;     Total combinational functions  ; 114                                         ;
 ;     Dedicated logic registers      ; 49                                          ;
 ; Total registers                    ; 49                                          ;
-; Total pins                         ; 15                                          ;
+; Total pins                         ; 24                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -191,41 +191,50 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 60        ;
+; Estimated Total logic elements              ; 114       ;
 ;                                             ;           ;
-; Total combinational functions               ; 57        ;
+; Total combinational functions               ; 114       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 21        ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 35        ;
+;     -- 4 input functions                    ; 71        ;
+;     -- 3 input functions                    ; 7         ;
+;     -- <=2 input functions                  ; 36        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 26        ;
+;     -- normal mode                          ; 83        ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
 ; Total registers                             ; 49        ;
 ;     -- Dedicated logic registers            ; 49        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 15        ;
+; I/O pins                                    ; 24        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 49        ;
-; Total fan-out                               ; 316       ;
-; Average fan-out                             ; 2.32      ;
+; Total fan-out                               ; 545       ;
+; Average fan-out                             ; 2.58      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
-; |Lab3                      ; 57 (0)              ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |Lab3                   ; Lab3        ; work         ;
-;    |display:display_1|     ; 57 (57)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|display:display_1 ; display     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+-------------+--------------+
+; |Lab3                             ; 114 (5)             ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |Lab3                                                               ; Lab3        ; work         ;
+;    |arith:arith_1|                ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|arith:arith_1                                                 ; arith       ; work         ;
+;       |rippleAdder:rippleAdder_a| ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|arith:arith_1|rippleAdder:rippleAdder_a                       ; rippleAdder ; work         ;
+;          |fullAdder:fullAdder_0|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_0 ; fullAdder   ; work         ;
+;          |fullAdder:fullAdder_1|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_1 ; fullAdder   ; work         ;
+;          |fullAdder:fullAdder_2|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_2 ; fullAdder   ; work         ;
+;          |fullAdder:fullAdder_3|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_3 ; fullAdder   ; work         ;
+;    |display:display_1|            ; 83 (83)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|display:display_1                                             ; display     ; work         ;
+;    |seg_decoder:seg_decoder_m0|   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|seg_decoder:seg_decoder_m0                                    ; seg_decoder ; work         ;
+;    |seg_decoder:seg_decoder_m2|   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|seg_decoder:seg_decoder_m2                                    ; seg_decoder ; work         ;
+;    |seg_decoder:seg_decoder_m5|   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab3|seg_decoder:seg_decoder_m5                                    ; seg_decoder ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -242,6 +251,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 3     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |Lab3|display:display_1|seg_data[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -285,7 +303,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------------+
 ; bin_data[3..1] ; Input ; Info     ; Stuck at GND       ;
 ; bin_data[5]    ; Input ; Info     ; Stuck at GND       ;
-; bin_data[4]    ; Input ; Info     ; Stuck at VCC       ;
 +----------------+-------+----------+--------------------+
 
 
@@ -300,17 +317,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "seg_decoder:seg_decoder_m2" ;
-+----------------+-------+----------+--------------------+
-; Port           ; Type  ; Severity ; Details            ;
-+----------------+-------+----------+--------------------+
-; bin_data[5..4] ; Input ; Info     ; Stuck at GND       ;
-; bin_data[3]    ; Input ; Info     ; Stuck at VCC       ;
-; bin_data[2]    ; Input ; Info     ; Stuck at GND       ;
-; bin_data[1]    ; Input ; Info     ; Stuck at VCC       ;
-; bin_data[0]    ; Input ; Info     ; Stuck at GND       ;
-+----------------+-------+----------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seg_decoder:seg_decoder_m2"                                                                                                                         ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; bin_data ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -324,31 +337,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "seg_decoder:seg_decoder_m0" ;
-+----------------+-------+----------+--------------------+
-; Port           ; Type  ; Severity ; Details            ;
-+----------------+-------+----------+--------------------+
-; bin_data[5..3] ; Input ; Info     ; Stuck at GND       ;
-; bin_data[1..0] ; Input ; Info     ; Stuck at GND       ;
-; bin_data[2]    ; Input ; Info     ; Stuck at VCC       ;
-+----------------+-------+----------+--------------------+
-
-
-+-------------------------------------------+
-; Port Connectivity Checks: "arith:arith_1" ;
-+---------+-------+----------+--------------+
-; Port    ; Type  ; Severity ; Details      ;
-+---------+-------+----------+--------------+
-; a[1..0] ; Input ; Info     ; Stuck at GND ;
-; a[3]    ; Input ; Info     ; Stuck at GND ;
-; a[2]    ; Input ; Info     ; Stuck at VCC ;
-; b[3]    ; Input ; Info     ; Stuck at VCC ;
-; b[2]    ; Input ; Info     ; Stuck at GND ;
-; b[1]    ; Input ; Info     ; Stuck at VCC ;
-; b[0]    ; Input ; Info     ; Stuck at GND ;
-; s       ; Input ; Info     ; Stuck at VCC ;
-+---------+-------+----------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seg_decoder:seg_decoder_m0"                                                                                                                         ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; bin_data ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "bin_data[5..4]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -356,23 +351,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 15                          ;
+; boundary_port         ; 24                          ;
 ; cycloneiii_ff         ; 49                          ;
 ;     ENA               ; 3                           ;
 ;     SCLR              ; 32                          ;
 ;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 58                          ;
+; cycloneiii_lcell_comb ; 115                         ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 27                          ;
+;     normal            ; 84                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 21                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 71                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.80                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 4.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -391,7 +386,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 28 21:58:51 2020
+    Info: Processing started: Wed Sep 30 10:14:56 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -412,11 +407,11 @@ Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(4): created imp
 Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(6): created implicit net for "outL" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 6
 Warning (10236): Verilog HDL Implicit Net warning at fullAdder.v(7): created implicit net for "outR" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/fullAdder.v Line: 7
 Info (12127): Elaborating entity "Lab3" for the top level hierarchy
-Info (12128): Elaborating entity "arith" for hierarchy "arith:arith_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 47
+Info (12128): Elaborating entity "arith" for hierarchy "arith:arith_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 53
 Info (12128): Elaborating entity "rippleAdder" for hierarchy "arith:arith_1|rippleAdder:rippleAdder_a" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/arith.v Line: 23
 Info (12128): Elaborating entity "fullAdder" for hierarchy "arith:arith_1|rippleAdder:rippleAdder_a|fullAdder:fullAdder_0" File: C:/Users/Reuben/Github/EECS3201/Lab3/src/rippleAdder.v Line: 10
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 53
-Info (12128): Elaborating entity "display" for hierarchy "display:display_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 95
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 59
+Info (12128): Elaborating entity "display" for hierarchy "display:display_1" File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 101
 Warning (10230): Verilog HDL assignment warning at display.v(42): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 42
 Warning (10230): Verilog HDL assignment warning at display.v(47): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 47
 Warning (10230): Verilog HDL assignment warning at display.v(52): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 52
@@ -424,20 +419,20 @@ Warning (10230): Verilog HDL assignment warning at display.v(57): truncated valu
 Warning (10230): Verilog HDL assignment warning at display.v(62): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 62
 Warning (10230): Verilog HDL assignment warning at display.v(67): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 67
 Warning (10230): Verilog HDL assignment warning at display.v(72): truncated value with size 8 to match size of target (7) File: C:/Users/Reuben/Github/EECS3201/Lab3/src/display.v Line: 72
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_data[7]" is stuck at GND File: C:/Users/Reuben/Github/EECS3201/Lab3/Lab3.v Line: 3
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 138 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 63 logic cells
+    Info (21061): Implemented 114 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Mon Sep 28 21:58:57 2020
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Processing ended: Wed Sep 30 10:15:03 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:14
 
 

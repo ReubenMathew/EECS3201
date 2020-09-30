@@ -1,18 +1,27 @@
 |Lab3
-seg_sel[0] <= display:display_1.seg_sel
-seg_sel[1] <= display:display_1.seg_sel
-seg_sel[2] <= display:display_1.seg_sel
-seg_sel[3] <= display:display_1.seg_sel
-seg_sel[4] <= display:display_1.seg_sel
-seg_sel[5] <= display:display_1.seg_sel
-seg_data[0] <= display:display_1.seg_data
-seg_data[1] <= display:display_1.seg_data
-seg_data[2] <= display:display_1.seg_data
-seg_data[3] <= display:display_1.seg_data
-seg_data[4] <= display:display_1.seg_data
-seg_data[5] <= display:display_1.seg_data
-seg_data[6] <= display:display_1.seg_data
-seg_data[7] <= display:display_1.seg_data
+seg_sel[0] << display:display_1.seg_sel
+seg_sel[1] << display:display_1.seg_sel
+seg_sel[2] << display:display_1.seg_sel
+seg_sel[3] << display:display_1.seg_sel
+seg_sel[4] << display:display_1.seg_sel
+seg_sel[5] << display:display_1.seg_sel
+seg_data[0] << display:display_1.seg_data
+seg_data[1] << display:display_1.seg_data
+seg_data[2] << display:display_1.seg_data
+seg_data[3] << display:display_1.seg_data
+seg_data[4] << display:display_1.seg_data
+seg_data[5] << display:display_1.seg_data
+seg_data[6] << display:display_1.seg_data
+seg_data[7] << display:display_1.seg_data
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+s => s.IN1
 clk => clk.IN1
 
 

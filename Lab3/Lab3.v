@@ -1,13 +1,16 @@
 module Lab3(
 	output[5:0] seg_sel,
 	output[7:0] seg_data,
+	input [3:0] a,
+	input [3:0] b,
+	input s,
 	input clk
 );
 
 
-reg[3:0] a = 4'd4;
-reg[3:0] b = 4'd10;
-reg s = 1'b1; // subtraction control
+//reg[3:0] a = 4'd4;
+//reg[3:0] b = 4'd10;
+//reg s = 1'b0; // subtraction control
 
 wire[3:0] z;
 wire cout;

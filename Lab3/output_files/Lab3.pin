@@ -33,8 +33,8 @@
  --                  Bank 4:       3.3V
  --                  Bank 5:       3.3V
  --                  Bank 6:       2.5V
- --                  Bank 7:       2.5V
- --                  Bank 8:       2.5V
+ --                  Bank 7:       3.3V
+ --                  Bank 8:       3.3V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --                  It can also be used to report unused dedicated pins. The connection
  --                  on the board for unused dedicated pins depends on whether this will
@@ -69,22 +69,22 @@ CHIP  "Lab3"  ASSIGNED TO AN: EP4CE6F17C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
+VCCIO8                       : A1        : power  :                   : 3.3V    : 8         :                
+a[3]                         : A2        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+a[2]                         : A3        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+a[1]                         : A4        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+a[0]                         : A5        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+b[3]                         : A6        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+b[2]                         : A7        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+b[1]                         : A8        : input  : 3.3-V LVCMOS      :         : 8         : Y              
+b[0]                         : A9        : input  : 3.3-V LVCMOS      :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
-VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : A16       : power  :                   : 3.3V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
@@ -102,18 +102,18 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :      
 GND                          : B15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
+s                            : C2        : input  : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
-VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : C4        : power  :                   : 3.3V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
-VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : C7        : power  :                   : 3.3V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
-VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : C10       : power  :                   : 3.3V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 GND                          : C12       : gnd    :                   :         :           :                
-VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : C13       : power  :                   : 3.3V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
@@ -124,7 +124,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
 GND                          : D7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
+seg_data[7]                  : D8        : output : 3.3-V LVTTL       :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 7         :                
 GND                          : D10       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
@@ -302,7 +302,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R8        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 4         :                
-seg_data[7]                  : R10       : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                

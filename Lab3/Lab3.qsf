@@ -87,4 +87,22 @@ set_location_assignment PIN_E1 -to clk
 set_global_assignment -name VERILOG_FILE src/fullAdder.v
 set_global_assignment -name VERILOG_FILE src/rippleAdder.v
 set_global_assignment -name VERILOG_FILE src/arith.v
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to s
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to a[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to a[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to a[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to a[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to b[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to b[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to b[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to b[0]
+set_location_assignment PIN_C2 -to s
+set_location_assignment PIN_A2 -to a[3]
+set_location_assignment PIN_A3 -to a[2]
+set_location_assignment PIN_A4 -to a[1]
+set_location_assignment PIN_A5 -to a[0]
+set_location_assignment PIN_A6 -to b[3]
+set_location_assignment PIN_A7 -to b[2]
+set_location_assignment PIN_A8 -to b[1]
+set_location_assignment PIN_A9 -to b[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
