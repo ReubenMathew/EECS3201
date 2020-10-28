@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Wed Oct 28 12:54:54 2020
+Wed Oct 28 13:01:37 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 28 12:54:54 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 28 13:01:37 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab4                                        ;
 ; Top-level Entity Name              ; Lab4                                        ;
@@ -370,7 +370,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 28 12:54:47 2020
+    Info: Processing started: Wed Oct 28 13:01:29 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -379,19 +379,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file lab4.v
 Info (12021): Found 1 design units, including 1 entities, in source file src/counter.v
     Info (12023): Found entity 1: counter File: C:/Users/Reuben/Github/EECS3201/Lab4/src/counter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/seg_decoder.v
-    Info (12023): Found entity 1: seg_decoder File: C:/Users/Reuben/Github/EECS3201/Lab4/src/seg_decoder.v Line: 1
+    Info (12023): Found entity 1: seg_decoder File: C:/Users/Reuben/Github/EECS3201/Lab4/src/seg_decoder.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file src/display.v
-    Info (12023): Found entity 1: display File: C:/Users/Reuben/Github/EECS3201/Lab4/src/display.v Line: 1
+    Info (12023): Found entity 1: display File: C:/Users/Reuben/Github/EECS3201/Lab4/src/display.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file src/clock_limit.v
     Info (12023): Found entity 1: clock_limit File: C:/Users/Reuben/Github/EECS3201/Lab4/src/clock_limit.v Line: 1
 Info (12127): Elaborating entity "Lab4" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at Lab4.v(12): object "zero_ctrl" assigned a value but never read File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 12
-Info (12128): Elaborating entity "clock_limit" for hierarchy "clock_limit:clock_limit_1" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 48
-Info (12128): Elaborating entity "counter" for hierarchy "counter:count10_m0" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 62
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 82
-Info (12128): Elaborating entity "display" for hierarchy "display:seg_scan_m0" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 98
+Info (12128): Elaborating entity "clock_limit" for hierarchy "clock_limit:clock_limit_1" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 45
+Info (12128): Elaborating entity "counter" for hierarchy "counter:count10_m0" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 59
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 79
+Info (12128): Elaborating entity "display" for hierarchy "display:seg_scan_m0" File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 95
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Reuben/Github/EECS3201/Lab4/src/display.v Line: 46
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Reuben/Github/EECS3201/Lab4/src/display.v Line: 50
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "counter:count10_m1|data[2]" is converted into an equivalent circuit using register "counter:count10_m1|data[2]~_emulated" and latch "counter:count10_m1|data[2]~1" File: C:/Users/Reuben/Github/EECS3201/Lab4/src/counter.v Line: 20
@@ -410,9 +410,9 @@ Info (21057): Implemented 193 device resources after synthesis - the final resou
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 175 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Wed Oct 28 12:54:54 2020
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Wed Oct 28 13:01:37 2020
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:15
 
 

@@ -1,3 +1,6 @@
+// this module was already submitted as part of lab3
+
+
 module display(
 	input           clk,
 	input           rst_n,
@@ -7,6 +10,7 @@ module display(
 	input[7:0]      seg_data_1
 
 );
+
 parameter SCAN_FREQ = 200;     //scan frequency
 parameter CLK_FREQ = 50000000; //clock frequency
 

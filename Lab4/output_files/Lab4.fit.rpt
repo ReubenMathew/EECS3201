@@ -1,5 +1,5 @@
 Fitter report for Lab4
-Wed Oct 28 12:54:59 2020
+Wed Oct 28 13:01:42 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Oct 28 12:54:58 2020       ;
+; Fitter Status                      ; Successful - Wed Oct 28 13:01:42 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Lab4                                        ;
 ; Top-level Entity Name              ; Lab4                                        ;
@@ -1233,8 +1233,8 @@ Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin key1 uses I/O standard 3.3-V LVTTL at M15 File: C:/Users/Reuben/Github/EECS3201/Lab4/Lab4.v Line: 4
 Info (144001): Generated suppressed messages file C:/Users/Reuben/Github/EECS3201/Lab4/output_files/Lab4.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 6105 megabytes
-    Info: Processing ended: Wed Oct 28 12:54:59 2020
+    Info: Peak virtual memory: 6104 megabytes
+    Info: Processing ended: Wed Oct 28 13:01:42 2020
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:07
 

@@ -34,20 +34,20 @@ key1 => timer_cnt.OUTPUTSELECT
 key1 => timer_cnt.OUTPUTSELECT
 key1 => timer_cnt.OUTPUTSELECT
 key2 => key2.IN1
-seg_sel[0] << display:seg_scan_m0.seg_sel
-seg_sel[1] << display:seg_scan_m0.seg_sel
-seg_sel[2] << display:seg_scan_m0.seg_sel
-seg_sel[3] << display:seg_scan_m0.seg_sel
-seg_sel[4] << display:seg_scan_m0.seg_sel
-seg_sel[5] << display:seg_scan_m0.seg_sel
-seg_data[0] << display:seg_scan_m0.seg_data
-seg_data[1] << display:seg_scan_m0.seg_data
-seg_data[2] << display:seg_scan_m0.seg_data
-seg_data[3] << display:seg_scan_m0.seg_data
-seg_data[4] << display:seg_scan_m0.seg_data
-seg_data[5] << display:seg_scan_m0.seg_data
-seg_data[6] << display:seg_scan_m0.seg_data
-seg_data[7] << display:seg_scan_m0.seg_data
+seg_sel[0] <= display:seg_scan_m0.seg_sel
+seg_sel[1] <= display:seg_scan_m0.seg_sel
+seg_sel[2] <= display:seg_scan_m0.seg_sel
+seg_sel[3] <= display:seg_scan_m0.seg_sel
+seg_sel[4] <= display:seg_scan_m0.seg_sel
+seg_sel[5] <= display:seg_scan_m0.seg_sel
+seg_data[0] <= display:seg_scan_m0.seg_data
+seg_data[1] <= display:seg_scan_m0.seg_data
+seg_data[2] <= display:seg_scan_m0.seg_data
+seg_data[3] <= display:seg_scan_m0.seg_data
+seg_data[4] <= display:seg_scan_m0.seg_data
+seg_data[5] <= display:seg_scan_m0.seg_data
+seg_data[6] <= display:seg_scan_m0.seg_data
+seg_data[7] <= display:seg_scan_m0.seg_data
 
 
 |Lab4|clock_limit:clock_limit_1

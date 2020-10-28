@@ -1,3 +1,6 @@
+// this module was already submitted as part of lab3
+
+
 module seg_decoder
 (
     input[3:0]      bin_data,

@@ -11,9 +11,6 @@ reg[31:0] timer_cnt;
 reg en_1hz;
 reg zero_ctrl;
 
-
-
-
 always@(posedge clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
@@ -92,7 +89,7 @@ display seg_scan_m0(
     .rst_n      (rst_n),
     .seg_sel    (seg_sel),
     .seg_data   (seg_data),
-    .seg_data_0 ({1'b1,seg_data_0}),      //The  decimal point at the highest bit,and low level effecitve
+    .seg_data_0 ({1'b1,seg_data_0}),
     .seg_data_1 ({1'b1,seg_data_1})
 
 );
