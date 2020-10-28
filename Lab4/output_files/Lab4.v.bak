@@ -1,0 +1,5 @@
+module clock_limit(
+	input          control,
+	output reg[3:0] first,
+	output reg[3:0] second
+);
