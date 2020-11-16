@@ -1,0 +1,1113 @@
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v failed with 1 errors.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.test1_tb
+# vsim -gui work.test1_tb 
+# Start time: 18:55:40 on Nov 15,2020
+# Loading work.test1_tb
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 ascending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 ascending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 ascending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+run
+# Hello
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Hello
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+quit -sim
+# End time: 18:58:51 on Nov 15,2020, Elapsed time: 0:03:11
+# Errors: 0, Warnings: 2
+vsim -gui work.test1_tb
+# vsim -gui work.test1_tb 
+# Start time: 18:58:58 on Nov 15,2020
+# Loading work.test1_tb
+add wave -position insertpoint sim:/test1_tb/*
+run
+# Hello
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run
+# Hello
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+run
+# Hello
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Hello
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Hello
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v failed with 3 errors.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Hello
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+run
+# Starting Testbench...
+#           0
+#           1
+#           2
+#           3
+#           4
+#           5
+#           6
+#           7
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 19:54:37 on Nov 15,2020, Elapsed time: 0:55:39
+# Errors: 0, Warnings: 1
+vsim -gui work.test1_tb
+# vsim -gui work.test1_tb 
+# Start time: 21:33:00 on Nov 15,2020
+# Loading work.test1_tb
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+quit -sim
+# End time: 21:33:17 on Nov 15,2020, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 2
+vsim -gui work.test1_tb
+# vsim -gui work.test1_tb 
+# Start time: 21:33:29 on Nov 15,2020
+# Loading work.test1_tb
+# Loading work.test1
+add wave -position insertpoint sim:/test1_tb/*
+run
+# Starting Testbench...
+# x=1  y=1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# x=x  y=x
+# x=0  y=0
+# x=1  y=0
+# x=0  y=1
+# x=1  y=0
+# x=0  y=1
+# x=1  y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# x=0  y=0
+# x=1  y=0
+# x=0  y=1
+# x=1  y=0
+# x=0  y=1
+# x=1  y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v failed with 1 errors.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 1 failed with 1 error.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Warning in wave window restart: (vish-4014) No objects found matching '/test1_tb/clk'. 
+quit -sim
+# End time: 21:42:31 on Nov 15,2020, Elapsed time: 0:09:02
+# Errors: 0, Warnings: 1
+vsim -gui work.test1_tb
+# vsim -gui work.test1_tb 
+# Start time: 21:42:37 on Nov 15,2020
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v failed with 1 errors.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of test1_tb.v failed with 1 errors.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v failed with 1 errors.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+add wave -position insertpoint sim:/test1_tb/*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Compile of test1_tb.v was successful.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+restart
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+restart
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+run
+restart
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=x b=x c=x     x=x y=x
+run
+# a=0 b=0 c=0     x=0 y=0
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+run
+# a=0 b=1 c=0     x=1 y=0
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+run
+run
+restart
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+run
+run
+restart
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+run
+# a=0 b=0 c=1     x=1 y=0
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v failed with 6 errors.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 1 failed with 6 errors.
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+restart
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+restart
+# Compile of test1.v was successful.
+# Compile of test2.v was successful.
+# Compile of test1_tb.v was successful.
+# Compile of test2_tb.v was successful.
+# 4 compiles, 0 failed with no errors.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+# All outputs are zero
+# Compile of test1_tb.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+# Loading work.test1
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+run
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+# Compile of test1_tb.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+# Compile of test1_tb.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.test1_tb
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+run
+# a=0 b=0 c=1     x=1 y=0
+run
+# a=0 b=1 c=0     x=1 y=0
+run
+# a=0 b=1 c=1     x=0 y=1
+run
+# a=1 b=0 c=0     x=1 y=0
+run
+# a=1 b=0 c=1     x=0 y=1
+run
+# a=1 b=1 c=0     x=0 y=1
+run
+# a=1 b=1 c=1     x=1 y=1
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# Starting Testbench...
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
