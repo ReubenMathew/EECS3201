@@ -1,0 +1,20 @@
+vsim -gui work.test1_tb
+# vsim -gui work.test1_tb 
+# Start time: 12:24:52 on Dec 07,2020
+# Loading work.test1_tb
+# Loading work.test1
+add wave -position insertpoint sim:/test1_tb/*
+run
+# a=0 b=0 c=0     x=0 y=0
+# All outputs are zero
+# a=0 b=0 c=1     x=1 y=0
+# a=0 b=1 c=0     x=1 y=0
+# a=0 b=1 c=1     x=0 y=1
+# a=1 b=0 c=0     x=1 y=0
+# a=1 b=0 c=1     x=0 y=1
+# a=1 b=1 c=0     x=0 y=1
+# a=1 b=1 c=1     x=1 y=1
+run
+quit
+# End time: 12:25:31 on Dec 07,2020, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 1

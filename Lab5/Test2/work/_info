@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Reuben/Github/EECS3201/Lab5/Test1
+vtest1_tb
+!s110 1605499443
+!i10b 1
+!s100 o^jNb0DZ19Aho7@;`>`Eb2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJE`F391z:L[N;jFAMoMR11
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Reuben/Github/EECS3201/Lab5/Test2
+w1605499435
+Z3 8C:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2_tb.v
+Z4 FC:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2_tb.v
+!i122 24
+Z5 L0 4 28
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1605499443.000000
+Z7 !s107 C:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2_tb.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2_tb.v|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vtest2
+Z11 !s110 1605500745
+!i10b 1
+!s100 a9jG;=Po3m]UG_VPk86YY3
+R0
+I@M2RH7CG^YlTOEbQELYDY3
+R1
+R2
+w1605497941
+8C:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2.v
+FC:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2.v
+!i122 27
+L0 2 26
+R6
+r1
+!s85 0
+31
+Z12 !s108 1605500745.000000
+!s107 C:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/EECS3201/Lab5/Test2/test2.v|
+!i113 1
+R9
+R10
+vtest2_tb
+R11
+!i10b 1
+!s100 bRSl85aY_fhfm90B^=_Un1
+R0
+I5DRDYeUX>8_]Um6N:DL501
+R1
+R2
+w1605500740
+R3
+R4
+!i122 26
+R5
+R6
+r1
+!s85 0
+31
+R12
+R7
+R8
+!i113 1
+R9
+R10

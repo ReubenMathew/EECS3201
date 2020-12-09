@@ -1,0 +1,36 @@
+# Compile of test2_tb.v was successful.
+# Compile of test2.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test2_tb
+# vsim -gui work.test2_tb 
+# Start time: 23:25:53 on Nov 15,2020
+# Loading work.test2_tb
+# Loading work.test2
+add wave -position insertpoint sim:/test2_tb/*
+run
+# Time:               10000ps   All outputs are zero
+# Time:              200000ps   All outputs are zero
+# Time:              210000ps   All outputs are zero
+# Time:              400000ps   All outputs are zero
+# Time:              410000ps   All outputs are zero
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+
+
+
+
+
+
+
+
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Time:               10000ps   All outputs are zero
+# Time:              200000ps   All outputs are zero
+# Time:              210000ps   All outputs are zero
+# Time:              400000ps   All outputs are zero
+# Time:              410000ps   All outputs are zero
+# End time: 23:29:50 on Nov 15,2020, Elapsed time: 0:03:57
+# Errors: 0, Warnings: 1

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vtest1
+!s110 1605500558
+!i10b 1
+!s100 k^C[2=W?N^55A>5PRVLY00
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@TQ@AI7FFlCzM;M`b7hEF1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Reuben/Github/EECS3201/Lab5/Test1
+w1605497646
+8C:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1.v
+FC:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1.v
+!i122 4
+L0 2 9
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1605500558.000000
+!s107 C:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vtest1_tb
+!s110 1605500559
+!i10b 1
+!s100 ;eC62WRQJ9mAflzHPXNIj1
+R0
+IkMMae>3]=e[9B>DnJkaA?0
+R1
+R2
+w1605500277
+8C:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1_tb.v
+FC:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1_tb.v
+!i122 5
+L0 4 40
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/EECS3201/Lab5/Test1/test1_tb.v|
+!i113 1
+R5
+R6

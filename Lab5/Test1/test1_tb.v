@@ -1,4 +1,4 @@
-
+// Author : Reuben Ninan (216315509)
 `timescale 1ns/1ps
 
 module test1_tb();
@@ -14,8 +14,6 @@ test1 test1_m0(a,b,c,x,y);
 
 initial
 begin
-
-    $display("Starting Testbench...");
 
     for (i=0; i<2; i=i+1)
     begin
